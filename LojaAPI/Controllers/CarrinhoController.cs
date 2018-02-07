@@ -6,11 +6,11 @@ namespace LojaAPI.Controllers
 {
     public class CarrinhoController : ApiController
     {
-        public string Get(int id)
+        public Carrinho Get(int id)
         {
             CarrinhoDAO dao = new CarrinhoDAO();
             Carrinho carrinho = dao.Busca(id);
-            return carrinho.ToXml();
+            return carrinho;
         }
     }
 }
